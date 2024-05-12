@@ -1,0 +1,133 @@
+html {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url('logo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 70%;
+  background-position-x: 40rem;
+  background-position-y: 10rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  height: 70%;
+  z-index: 1;
+}
+
+.infoContent {
+  position: absolute;
+  top: 100%;
+  min-height: 80%;
+  z-index: 1;
+}
+
+#navbar {
+  background-color: #6ba1c4;
+  padding-left: 15px;
+  position: fixed;
+  top: 0;
+  height: 20%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30%;
+  margin-top: 2rem;
+  margin-inline: -8px;
+  padding-inline: 2rem;
+  background-color: #354b59;
+}
+
+.info p {
+  font-size: 0.7rem;
+}
+
+.logo img {
+  height: 10rem;
+  width: auto;
+}
+
+#os {
+  font: 5em "Fira Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0px;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#us {
+  position: absolute;
+  left: 1.5rem;
+  top: 4rem;
+  color: white;
+}
+
+.navButton {
+  display: inline;
+  position: absolute;
+  bottom: -3px;
+}
+
+.navButton a {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #375466;
+  text-decoration: none;
+}
+
+.navButton div {
+  margin-right: 50px;
+  padding: 20px;
+  padding-bottom: 0;
+  border-radius: 20px 20px 0px 0px;
+  display: inline;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 23px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.5s;
+}
+
+.navButton div:hover {
+  box-shadow: 0 -5px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.19);
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  min-height: 80%;
+}
+
+.postDiv {
+  width: 20rem;
+  background-color: rgb(230, 230, 230);
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border-radius: .6rem;
+  padding-inline: .7rem;
+  padding-bottom: 0.5rem;
+}
+
+.upvote{
+  
+}
+
+.downvote{
+  
+}

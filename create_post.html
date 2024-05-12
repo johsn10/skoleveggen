@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="create_post.css" rel="stylesheet" type="text/css"/>
+    <script src="createPost.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Skriv ditt eget innlegg</h1>
+      
+      <form class="form" id="form" onsubmit="formOnSubmit()">
+        <label for="heading">Emne</label>
+        <input type="text" id="heading" name="heading">
+
+        <label for="content">Innlegg</label>
+        <textarea type="text" id="content" name="content"></textarea>
+        <p></p>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
