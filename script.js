@@ -15,17 +15,17 @@ async function createPostsInHtml() {
 }
 
 async function assemblePostDiv(headingStr, contentStr, postId) {
-  // Create heading div
+  // Opprett emne div-en
   const heading = document.createElement("h3");
   const headingTextNode = document.createTextNode(headingStr);
   heading.appendChild(headingTextNode);
 
-  // Create the content div
+  // Oprett innholds div-en
   const content = document.createElement("p");
   const contentTextNode = document.createTextNode(contentStr);
   content.appendChild(contentTextNode);
 
-  // Create vote buttons
+  // Opprett stemme knapper
   const upvoteTextNode = document.createTextNode("👍");
   const upvoteButton = document.createElement("button");
   upvoteButton.appendChild(upvoteTextNode);
@@ -40,14 +40,14 @@ async function assemblePostDiv(headingStr, contentStr, postId) {
   downvoteButton.class = "downvote";
   downvoteButton.onclick = onVote;
 
-  // Create voteScore
+  // Opprett voteScore
   const voteScore = await getVoteScore(postId);
   console.log(voteScore);
-  const voteScoreTextNode = document.createTextNode(`Vote score: ${voteScore}`);
+  const voteScoreTextNode = document.createTextNode(`Karma: ${voteScore}`);
   const voteScoreElement = document.createElement("p");
   voteScoreElement.appendChild(voteScoreTextNode);
 
-  // Assemble into postDiv
+  // Samle inni postDiv
   const postDiv = document.createElement("div");
   postDiv.appendChild(heading);
   postDiv.appendChild(content);
@@ -65,6 +65,7 @@ async function onVote(event) {
   const isUpvote = event.target.class == "upvote";
   
   if (!originalVote(id)) {
+    alert("Du har allerede stemt på dette innlegget")
     return;
   } else {
     addVoteCookie(id);
@@ -80,6 +81,7 @@ async function onVote(event) {
       isUpvote: isUpvote,
     })
   });
+  location.reload()
 }
 
 async function getPosts() {

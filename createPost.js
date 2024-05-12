@@ -3,14 +3,19 @@ async function formOnSubmit() {
   
   const heading = form.heading.value;
   const content = form.content.value;
+  
+  if (heading=="" || content=="") {
+    alert("Mangler innhold")
+    return
+  }
+  
   await createPost(heading, content);
-
-  // Stop reload
+  // Stopp reload
   return false;
 }
 
 async function createPost(heading, content) {
-  console.log("Create post with values: " + heading + " and " + content);
+  console.log("Opprett innlegg med verdiene: " + heading + " og " + content);
   const result = await fetch("https://even-forum.vercel.app/api/posts", {
     method: "POST",
     headers: {

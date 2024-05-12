@@ -55,12 +55,19 @@ body {
   background-color: #354b59;
 }
 
+.infoBorder {
+  background-color: rgb(230, 230, 230);
+  width: 40%;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+
 .info p {
   font-size: 0.7rem;
 }
 
-.logo img {
-  height: 10rem;
+img {
+  height: 6.5rem;
   width: auto;
 }
 
@@ -115,13 +122,29 @@ body {
 }
 
 .postDiv {
-  width: 20rem;
+  min-width: 20rem;
+  max-width: 30%;
   background-color: rgb(230, 230, 230);
   margin-top: 2rem;
   margin-left: 2rem;
   border-radius: .6rem;
   padding-inline: .7rem;
   padding-bottom: 0.5rem;
+}
+
+@media (max-width:1500px) {
+  #navbar {
+    height: 25%;
+  }
+
+  .content {
+    top: 25%;
+    height: 65%;
+  }
+
+  .postDiv {
+    min-width: 30rem;
+  }
 }
 
 .upvote{
